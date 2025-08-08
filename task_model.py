@@ -1,20 +1,18 @@
 # task_model.py
-class Task:
-    def __init__(self, id, title):
-        self.id = id
-        self.title = title
-        self.is_completed = False
-
 class TaskModel:
-    def __init__(self):
-        self.tasks = []
-        self.next_id = 1
+    def __init__(self, task_name):
+        self.task_name = task_name
+        self.is_done = False
 
-    def add_task(self, title):
-        t = Task(self.next_id, title)
-        self.tasks.append(t)
-        self.next_id += 1
-        return t
+    def get_task_name(self):
+        return self.task_name
 
-    def list_tasks(self):
-        return self.tasks
+    def set_done(self):
+        self.is_done = True
+
+    def remove_task(self):
+        self.task_name = None
+        self.is_done = False
+
+    def is_done(self):
+        return self.is_done
