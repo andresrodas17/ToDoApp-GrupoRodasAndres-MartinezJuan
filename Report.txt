@@ -1,0 +1,67 @@
+# Informe del Grupo 1
+
+1. Pasos realizados:
+- Creamos el repositorio ToDoApp-Group1 en GitHub.
+- Cada miembro creó una rama (andres_rodas, juan-martinez, juan-tuiran).
+- Implementamos funcionalidades y resolvimos conflictos.
+
+2. Comandos Git:
+- git clone <URL>: Clonar el repositorio.
+- git checkout -b andres_rodas: Crear rama.
+- git add <archivo>: Añadir cambios.
+- git commit -m "mensaje": Hacer commit.
+- git push origin andres_rodas: Empujar rama.
+- git merge juan-tuiran: Fusionar rama con conflicto.
+- git push origin --delete andres_rodas: Eliminar rama.
+
+3. Conflictos:
+- Conflicto en task_model.py entre is_completed/is_done y mark_as_complete/set_done.
+- Solución: Combinamos métodos, manteniendo is_completed como atributo principal.
+
+4. Contribuciones:
+- andres_rodas: Añadió mark_as_complete y actualizó main.py.
+- juan-martinez: Añadió delete_task y actualizó README.md.
+- juan-tuiran: Simuló conflicto con set_done/remove_task y lo resolvió.
+
+5. Reflexiones:
+- Aprendimos a coordinar ramas y resolver conflictos en equipo.
+- Git facilita el trabajo colaborativo, pero requiere comunicación clara.
+- Los Pull Requests ayudan a revisar cambios antes de fusionar.
+
+6. Preguntas de reflexión:
+- **¿Cómo coordinaron el trabajo en equipo para evitar conflictos innecesarios?**  
+  Manteníamos comunicación constante por chat y definimos qué parte del código modificaba cada uno. Antes de empezar una nueva tarea, cada integrante actualizaba su rama con los últimos cambios de `main`.
+
+- **¿Qué aprendieron sobre la resolución de conflictos en Git?**  
+  Aprendimos que es importante leer con cuidado las diferencias entre ramas y no sobrescribir cambios sin revisarlos. Usar herramientas como `git diff` y el merge manual ayuda a mantener la integridad del código.
+
+- **¿Por qué es importante usar Pull Requests en proyectos colaborativos?**  
+  Porque permiten revisar el código antes de integrarlo, asegurando calidad, evitando errores y facilitando discusiones sobre cambios.
+
+- **¿Cómo podría mejorarse el flujo de trabajo con herramientas como CI/CD?**  
+  Se podría automatizar la ejecución de pruebas y despliegues cada vez que se fusiona código, asegurando que no se introduzcan errores en producción.
+
+7. Historial de commits (`git log --oneline --graph --all`):
+*   20b1108 (HEAD -> group-1) Merge remote-tracking branch 'origin/main' into group-1
+|\
+| *   72ba4d0 (origin/main, origin/HEAD) Merge pull request #1 from andresrodas17/group-1
+| |\
+| | *   4e40777 Resolver conflicto combinando métodos y atributos
+| | |\
+| | | * 4b88149 Añadir set_done y remove_task en TaskModel
+| | |/
+| |/|
+* | |   20dd188 Merge remote-tracking branch 'origin/juan-martinez' into group-1
+|\ \ \
+| |_|/
+|/| |
+| * | aa7ca78 Añadir funcionalidad para eliminar tareas y actualizar README
+| |/
+* / 8b2cc91 (andres_rodas) Añadir funcionalidad para marcar tareas como completadas
+|/
+* 8c83f4e (main) Inicializar proyecto ToDoApp
+* e55b216 Initial commit
+
+* aa7ca78 (origin/juan-martinez, juan-martinez) Añadir funcionalidad para eliminar tareas y actualizar README
+* 8c83f4e (HEAD -> main, origin/main, origin/HEAD) Inicializar proyecto ToDoApp
+* e55b216 Initial commit
